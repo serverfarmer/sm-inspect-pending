@@ -1,7 +1,4 @@
 #!/bin/bash
-. /opt/farm/scripts/init
-. /opt/farm/scripts/functions.custom
-
 
 out=/var/cache/farm
 path=/etc/local/.farm
