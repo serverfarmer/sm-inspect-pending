@@ -1,11 +1,10 @@
 #!/bin/bash
+. /opt/farm/scripts/init
 
 out=/var/cache/farm
-path=/etc/local/.farm
 command="/opt/farm/ext/packages/utils/pending.sh"
-servers=`cat $path/virtual.hosts $path/physical.hosts $path/cloud.hosts $path/lxc.hosts $path/workstation.hosts $path/problematic.hosts |grep -v ^# |grep -v ^$ |grep -v laptop`
 
-for server in $servers; do
+for server in `/opt/farm/ext/inspect-pending/utils/get-hosts.sh`; do
 
 	if [[ $server =~ ^[a-z0-9.-]+$ ]]; then
 		server="$server::"
