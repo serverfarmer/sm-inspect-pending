@@ -4,7 +4,7 @@
 out=/var/cache/farm
 command="/opt/farm/ext/packages/utils/pending.sh"
 
-for server in `/opt/farm/ext/inspect-pending/utils/get-hosts.sh`; do
+for server in `/opt/farm/mgr/inspect-pending/utils/get-hosts.sh`; do
 
 	host=`/opt/farm/ext/farm-manager/internal/decode.sh host $server`
 	port=`/opt/farm/ext/farm-manager/internal/decode.sh port $server`
