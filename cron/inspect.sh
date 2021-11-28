@@ -1,7 +1,7 @@
 #!/bin/sh
 . /opt/farm/scripts/init
 
-out=/var/cache/farm
+out=~/.serverfarmer/inspection
 command="/opt/farm/ext/packages/utils/pending.sh"
 
 for server in `/opt/farm/mgr/inspect-pending/utils/get-hosts.sh`; do
